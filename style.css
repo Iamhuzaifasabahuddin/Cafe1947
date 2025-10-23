@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cream: #FBF8F3;
+    --dark: #2C2420;
+    --accent: #C17D5A;
+    --sage: #8B9A7B;
+    --light-sage: #ADB9A0;
+}
+
+body {
+    background: var(--cream);
+    color: var(--dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--cream) 0%, #F5EFE7 100%);
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(139, 154, 123, 0.03) 2px, rgba(139, 154, 123, 0.03) 4px);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.tagline {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-style: italic;
+    color: var(--accent);
+    margin-bottom: 2rem;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: var(--sage);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 3rem;
+    font-size: 0.9rem;
+    color: var(--sage);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background: rgba(251, 248, 243, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    border-bottom: 1px solid rgba(139, 154, 123, 0.2);
+    z-index: 100;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--dark);
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: "Cinzel Decorative", serif;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-subheader {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-family: "Cinzel Decorative", serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+       font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--sage);
+    font-size: 1.1rem;
+}
+
+.menu-grid {
+    display: grid;
+    gap: 3rem;
+}
+
+.menu-item {
+    font-family: "Cinzel Decorative", serif;
+    border-bottom: 1px solid rgba(139, 154, 123, 0.2);
+    padding-bottom: 2rem;
+    transition: transform 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateX(10px);
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.item-name {
+    font-size: 1.4rem;
+    color: var(--dark);
+    font-weight: 400;
+}
+
+.item-price {
+    font-size: 1.2rem;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.item-description {
+    font-family: "Lato", serif;
+    font-weight: 400;
+    color: var(--sage);
+    line-height: 1.8;
+    max-width: 800px;
+}
+
+.category-badge {
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    background: var(--light-sage);
+    color: var(--cream);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    border-radius: 2px;
+}
+
+.weekly-special {
+    background: linear-gradient(135deg, #F5EFE7 0%, var(--cream) 100%);
+    padding: 4rem 2rem;
+    margin: 4rem 0;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.day-title {
+    font-family: "Cinzel Decorative", serif;
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 2rem;
+}
+
+footer {
+    background: var(--dark);
+    color: var(--cream);
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    nav {
+        gap: 1rem;
+        font-size: 0.8rem;
+    }
+
+    section {
+        padding: 4rem 1.5rem;
+    }
+}
+
