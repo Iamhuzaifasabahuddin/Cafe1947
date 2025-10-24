@@ -414,7 +414,7 @@ footer {
 }
 
 .footer-about p {
-    color: var(--sage);
+    color: var(--light-sage);
     line-height: 1.8;
     font-size: 0.95rem;
 }
@@ -429,7 +429,7 @@ footer {
 }
 
 .footer-links a {
-    color: var(--sage);
+    color: var(--light-sage);
     text-decoration: none;
     transition: color 0.3s;
     font-size: 0.95rem;
@@ -440,7 +440,7 @@ footer {
 }
 
 .footer-hours p {
-    color: var(--sage);
+    color: var(--light-sage);
     line-height: 1.8;
     font-size: 0.95rem;
 }
@@ -497,7 +497,7 @@ footer {
 }
 
 .footer-credits {
-    color: var(--sage);
+    color: var(--light-sage);
 }
 
 .footer-credits a {
