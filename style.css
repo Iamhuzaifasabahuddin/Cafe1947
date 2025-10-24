@@ -414,7 +414,7 @@ footer {
 }
 
 .footer-about p {
-    color: var(--light-sage);
+    color: var(--sage);
     line-height: 1.8;
     font-size: 0.95rem;
 }
@@ -429,7 +429,7 @@ footer {
 }
 
 .footer-links a {
-    color: var(--light-sage);
+    color: var(--sage);
     text-decoration: none;
     transition: color 0.3s;
     font-size: 0.95rem;
@@ -440,7 +440,7 @@ footer {
 }
 
 .footer-hours p {
-    color: var(--light-sage);
+    color: var(--sage);
     line-height: 1.8;
     font-size: 0.95rem;
 }
@@ -483,7 +483,7 @@ footer {
 }
 
 .footer-legal a {
-    color: var(--light-sage);
+    color: var(--sage);
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -497,7 +497,7 @@ footer {
 }
 
 .footer-credits {
-    color: var(--light-sage);
+    color: var(--sage);
 }
 
 .footer-credits a {
@@ -523,5 +523,110 @@ footer {
 
     .footer-legal {
         justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 2rem 1.5rem 1rem;
+        margin-top: 3rem;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .footer-about h3,
+    .footer-links h4,
+    .footer-hours h4 {
+        font-size: 1.1rem;
+    }
+
+    .footer-about p,
+    .footer-links a,
+    .footer-hours p {
+        font-size: 0.9rem;
+    }
+
+    .footer-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-social {
+        padding: 1.2rem 0;
+    }
+
+    .footer-social svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding-top: 1.5rem;
+        font-size: 0.85rem;
+    }
+
+    .footer-legal {
+        justify-content: center;
+    }
+
+    .copyright,
+    .footer-credits {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-footer {
+        padding: 1.5rem 1rem 1rem;
+    }
+
+    .footer-top {
+        gap: 1.5rem;
+    }
+
+    .footer-about h3,
+    .footer-links h4,
+    .footer-hours h4 {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .footer-about p,
+    .footer-links a,
+    .footer-hours p {
+        font-size: 0.85rem;
+    }
+
+    .footer-social {
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+
+    .footer-social svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
+        gap: 0.8rem;
+        padding-top: 1.2rem;
+    }
+
+    .footer-legal {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .footer-legal span {
+        display: none;
     }
 }
