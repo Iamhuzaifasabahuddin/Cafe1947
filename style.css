@@ -8,10 +8,10 @@
 
 :root {
     --cream: #FBF8F3;
-    --dark: #2C2420;
-    --accent: #C17D5A;
-    --sage: #8B9A7B;
-    --light-sage: #ADB9A0;
+    --dark: #5D5650;
+    --accent: #D56401;
+    --sage: #E68302;
+    --light-sage: #E6934E;
 }
 
 body {
@@ -473,6 +473,7 @@ footer {
     border-top: 1px solid rgba(251, 248, 243, 0.2);
     font-size: 0.9rem;
     color: var(--light-sage);
+    padding-bottom: 4rem;
 }
 
 .footer-legal {
