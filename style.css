@@ -383,10 +383,12 @@ footer {
 }
 
 .site-footer {
-    background: var(--dark);
+    background:
+    linear-gradient(135deg, var(--cream) 10%, #F5EFE7 100%);
     color: var(--cream);
     padding: 3rem 2rem 1.5rem;
     margin-top: 4rem;
+    box-shadow: 0 10px 40px rgba(44, 36, 32, 0.15);
 }
 
 .footer-content {
